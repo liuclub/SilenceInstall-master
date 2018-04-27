@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.science.silenceinstall.MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/rl_silence_root_install"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:descendantFocusability="blocksDescendants"
+        android:onClick="onClick"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/tv_silence_root_install"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="静默安装"
+            android:textColor="@color/textPrimary"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/tv_silence_root_install"
+            android:layout_marginRight="16dp"
+            android:layout_toLeftOf="@+id/cb_silence_root_install"
+            android:text="在后台安装程序(需要root权限，如果没有则进行普通安装)"
+            android:textColor="@color/textSecondary"
+            android:textSize="14sp" />
+
+        <android.support.v7.widget.AppCompatCheckBox
+            android:id="@+id/cb_silence_root_install"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"
+            android:clickable="false" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_silence_auto_install"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:descendantFocusability="blocksDescendants"
+        android:onClick="onClick"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/tv_silence_auto_install"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="免root自动安装"
+            android:textColor="@color/textPrimary"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/tv_silence_auto_install"
+            android:layout_marginRight="16dp"
+            android:layout_toLeftOf="@+id/cb_silence_auto_install"
+            android:text="免root自动安装，不需要人为点击安装，需要开启无障碍服务"
+            android:textColor="@color/textSecondary"
+            android:textSize="14sp" />
+
+        <android.support.v7.widget.AppCompatCheckBox
+            android:id="@+id/cb_silence_auto_install"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"
+            android:clickable="false" />
+
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/et_apk_url"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="请输入下载链接"
+        android:padding="16dp"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/btn_download"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:onClick="onClick"
+        android:text="开始下载" />
+</LinearLayout>
